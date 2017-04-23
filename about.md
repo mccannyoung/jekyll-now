@@ -4,7 +4,15 @@ title: About
 permalink: /about/
 ---
 
-I am a Senior Software Engineer (SE III) at a communications company. I like learning new languages, best practices, and how to kick butt. 
+I am a Senior Software Engineer (SE III) at a communications company. I like learning new languages, best practices, and how to kick butt.
+
+### Why blog?
+
+I'm blogging because 
+- I have a lot of thoughts
+- I need to write stuff down to remember it
+- I like the idea of sharing information in an easy to consume format
+- Most (but not all) of the tech bloggers I've come across are men, and I want our field to look like less of a boy's club
 
 ### Why The Red Queen's Race?
 
