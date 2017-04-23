@@ -61,32 +61,56 @@ example taken from: [here](https://gobyexample.com/goroutines)
 If you run it the output will be about what you'd expect if you're familiar with threads and concurrency. For those of you who aren't: the function when called directly, it is running on the same thread, so it prints 1, 2, and then 3. Now when the go routine (the line "go f("goroutine")") gets called, it's put on a different thread than the main program. What is the significance of this? Basically there are two threads going, and there is no way to predict what order they will execute in, as thread management is something the operating system manages.
 
 So, it may print out:
+
+
 1 (this is from the direct call)
+
 2 (this is from the direct call)
+
 3 (this is from the direct call)
+
 1 (this is from the go routine call)
+
 going
+
 2 (this is from the go routine call)
+
 3 (this is from the go routine call)
+
 
 It could also be something like...
 
+
 1 (this is from the direct call)
+
 2 (this is from the direct call)
+
 3 (this is from the direct call)
+
 1 (this is from the go routine call)
+
 2 (this is from the go routine call)
+
 3 (this is from the go routine call)
+
 going
 
-OR even
+
+Or even
+
 
 1 (this is from the direct call)
+
 2 (this is from the direct call)
+
 3 (this is from the direct call)
+
 going
+
 1 (this is from the go routine call)
+
 2 (this is from the go routine call)
+
 3 (this is from the go routine call)
 
 
