@@ -10,7 +10,7 @@ All I gotte say is that this set up is very easy! I look forward to playing with
 var string = "Hello World;
 ```
 
-```C#
+```csharp
 /* Comment 1 */
 // Comment 2
 var greeting = "Hello World;
