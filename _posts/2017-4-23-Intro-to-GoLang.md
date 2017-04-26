@@ -114,10 +114,13 @@ Or even
 >3 (this is from the go routine call)
 
 
-Now, you may wonder "Why the heck would I want to not know the exact order things in my program will happen in?" The answer is because it can make your program run faster, especially on machines with more than one processor core. Instead of having one thread doing it all on one processor, you can have 2 or 4 or even 8 processors doing part of the work, so it will finish faster. This is a very powerful concept that can be leveraged on tasks where you can divide up tasks in a way where order doesn't matter. This is especially big in BigData.
+Now, you may wonder "Why the heck would I want to not know the exact order things in my program will happen in?" The answer is because it can make your program run faster, especially on machines with more than one processor core. Instead of having one thread doing it all on one processor, you can have 2 or 4 or even 8 processors doing part of the work, so it will finish faster. This is a very powerful concept that can be leveraged on tasks where you can divide up tasks in a way where order doesn't matter. This is especially big in BigData and any time speed is of the essence. Concurrency in other languages tends to be a rather complex endeavor, requiring add on libraries and a lot of boilerplate code. 
 
 
-Go is also rather straightforward, it's not object oriented, it doesn't have all of the abilities of C#/Java, but not all applications *need* objects, generics, and other options which are missing from Go. 
+Go is also rather straightforward pretty easy to pick up and read. However, it's not object oriented, it doesn't have all of the abilities of C#/Java, it's certainly not as mature as either, and if you grew up in the land of objects (Java/C++/python) you quickly find some of your "best practices" can no longer be followed (particularly with polymorphism and other concepts that rely on objects). But not all applications *need* objects, generics, and other options which are missing from Go. 
 
 
-Anyway, next week I'll be back with some basics about the Go language - what it can and can't do, and a little bit about when it's a good vs bad option. I hope this post has been informative about some of the background of Go. 
+It is my opinion that languages are like tools, a good craftsman (or craftsperson) finds the right tool for their job. Would I write a desktop application for image manipulation in JavaScript? Not if I had other options. Go shouldn't be used for everything. It should not be used for that image application either. But for simple microservices, which inherently would have few objects, it is a reasonable choice. It's fast to write, it compiles quickly, and it handles concurrency well. 
+
+
+Next week I'll be back with some basics about the Go language - what it can and can't do, and a little bit about when it's a good vs bad option. I hope this post has been informative about some of the background of Go. 
