@@ -1,1 +1,58 @@
+---
+layout: post
+title: Golang Basics
+---
+
+Here is the obligatory "Hello World" in Go.
+
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, 世界")
+}
+```
+
+Let's look at this.
+
+```golang
+package main
+```
+
+Go uses packages to organize code into modules. [Modular design](https://en.wikipedia.org/wiki/Module_pattern) is a very important concept in good software design. The package that contains the func main() you want to run when running your program must be named main.
+
+```golang
+import "fmt"
+```
+
+The line imports the fmt package. fmt, as well as os, json, net, and [a bunch of others](https://golang.org/pkg/) are packages in the standard library, but you certainly aren't limited to them. You can also include third party packages from github. If you wanted to be able to connect to rabbitmq, you could use the github.com/streadway/amqp package, importing it looks like this:
+
+```golang
+import "github.com/streadway/amqp"
+```
+
+If you want to import a lot of packages, you can use an alternative format, the requires a little bit less typing.  
+
+```golang
+import (
+	"fmt"
+	"os"
+	"sync"
+	"sync/atomic"
+)
+```
+
+Next let's look at the function. 
+
+```golang
+func main() {
+	fmt.Println("Hello, 世界")
+}
+```
+
+If a function is named main, it functions the same as main in many other languages, as in it will be the function called when you run the file. 
+
+Notice the function it calls, from the imported "fmt" package, the function Println is called. Not that unlike main, Println is capitalized, this is because a function need so to be capitalized to be exposed outside the package.
 
