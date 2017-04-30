@@ -54,5 +54,87 @@ func main() {
 
 If a function is named main, it functions the same as main in many other languages, as in it will be the function called when you run the file. 
 
-Notice the function it calls, from the imported "fmt" package, the function Println is called. Not that unlike main, Println is capitalized, this is because a function need so to be capitalized to be exposed outside the package.
+Notice the function it calls, from the imported "fmt" package, the function Println is called. Not that unlike main, Println is capitalized, this is because a function need so to be capitalized to be exposed outside the package, or exported. 
+
+Let's take a closer look at the code from the last blog post:
+
+```golang
+// A _goroutine_ is a lightweight thread of execution.
+
+package main
+
+import "fmt"
+
+func f(from string) {
+    for i := 0; i < 3; i++ {
+        fmt.Println(from, ":", i)
+    }
+}
+
+func main() {
+
+    // Suppose we have a function call `f(s)`. Here's how
+    // we'd call that in the usual way, running it
+    // synchronously.
+    f("direct")
+
+    // To invoke this function in a goroutine, use
+    // `go f(s)`. This new goroutine will execute
+    // concurrently with the calling one.
+    go f("goroutine")
+
+    // You can also start a goroutine for an anonymous
+    // function call.
+    go func(msg string) {
+        fmt.Println(msg)
+    }("going")
+
+    // Our two function calls are running asynchronously in
+    // separate goroutines now, so execution falls through
+    // to here. This `Scanln` code requires we press a key
+    // before the program exits.
+    var input string
+    fmt.Scanln(&input)
+    fmt.Println("done")
+}
+```
+
+Let's look at the function f.
+
+```golang
+func f(from string) {
+    for i := 0; i < 3; i++ {
+        fmt.Println(from, ":", i)
+    }
+}
+```
+
+The signature is different than what you may be used to in C++ or Java, the type and the variables name are reversed. More complex go signatures can look like the following:
+
+```golang
+func add(x int, y int) int {
+``` 
+This function, add takes in two ints, x and y and returns an int
+
+Moving on, let's look at the loop.
+
+```golang
+ for i := 0; i < 3; i++ {
+        fmt.Println(from, ":", i)
+ }
+ ```
+ 
+ I'm going to assume you understand [for loops](https://en.wikipedia.org/wiki/For_loop), the feature of interest I'd like to point out is 
+ 
+```golang
+i := 0;
+```
+
+In traditional strongly typed object oriented languages, that line would be:
+
+```java
+int i = 0;
+```
+
+In go, := means "declare and assign it the value on the right side." It's equvalent to var x = 0 in C#
 
