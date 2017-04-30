@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Golang Basics
+title: Golang Basics part 1
 ---
 
 Here is the obligatory "Hello World" in Go.
@@ -33,7 +33,7 @@ The line imports the fmt package. fmt, as well as os, json, net, and [a bunch of
 import "github.com/streadway/amqp"
 ```
 
-If you want to import a lot of packages, you can use an alternative format, the requires a little bit less typing.  
+If you want to import multiple packages, you can use an alternative format, "factored import" the requires a little bit less typing (and is considered good style).  
 
 ```golang
 import (
@@ -136,5 +136,14 @@ In traditional strongly typed object oriented languages, that line would be:
 int i = 0;
 ```
 
-In go, := means "declare and assign it the value on the right side." It's equvalent to var x = 0 in C#
+In go, := means "declare and assign it the value on the right side." It's equvalent to var x = 0 in C#.
 
+The comments explain the goroutines, and the anonymous function. 
+
+```golang
+fmt.Scanln(&input)
+```
+
+Anyone familar with C/C++ the ampersand should be a dead give away that go supports pointers. [Here](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back) is a very good article about pointers in go. 
+
+Part 2 coming next week
