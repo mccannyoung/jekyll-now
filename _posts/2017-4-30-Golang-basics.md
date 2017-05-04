@@ -123,6 +123,12 @@ func add( x, y int) int {
 ```
 Neat huh? 
 
+If you want it to return two values (like if you wanted a function that took in a full name and returned the first and last name as separate strings) the signature would look something like: 
+
+```golang
+funct parsename(fullname string) (string, string){
+```
+
 Moving on, let's look at the loop.
 
 ```golang
