@@ -116,6 +116,13 @@ func add(x int, y int) int {
 ``` 
 This function, add takes in two ints, x and y and returns an int
 
+The parameters can be consolidated, because go is a pretty terse language, to:
+
+```golang 
+func add( x, y int) int {
+```
+Neat huh? 
+
 Moving on, let's look at the loop.
 
 ```golang
