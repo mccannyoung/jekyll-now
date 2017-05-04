@@ -129,6 +129,12 @@ If you want it to return two values (like if you wanted a function that took in 
 funct parsename(fullname string) (string, string){
 ```
 
+If you want to look super fancy, you can even name your output:
+
+```golang
+funct parsename(fullname string) (firstName, lastName string){
+```
+
 Moving on, let's look at the loop.
 
 ```golang
