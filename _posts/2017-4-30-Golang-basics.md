@@ -146,7 +146,7 @@ Moving on, let's look at the loop.
  I'm going to assume you understand [for loops](https://en.wikipedia.org/wiki/For_loop), the feature of interest I'd like to point out is 
  
 ```golang
-i := 0;
+i := 0
 ```
 
 In traditional strongly typed object oriented languages, that line would be:
@@ -157,12 +157,67 @@ int i = 0;
 
 In go, := means "declare and assign it the value on the right side." It's equvalent to var x = 0 in C#.
 
+If you want to be as explicit as possible the above golang line can turn into:
+
+```golang
+var i int
+i = 0
+```
+
 The comments explain the goroutines, and the anonymous function. 
 
 ```golang
 fmt.Scanln(&input)
 ```
 
-Anyone familar with C/C++ the ampersand should be a dead give away that go supports pointers. [Here](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back) is a very good article about pointers in go. 
+Anyone familar with C/C++ the ampersand should be a dead give away that we're in pointer territory. What's being passed to the Scanln is the address of the variable "input". Like C/C++ the astrix is also used, to get the value at the address of a pointer. 
+
+```golang
+package main
+ 
+import "fmt"
+ 
+func main() {
+	var a int   // a variable of type 'int'
+	var b int   // another 'int'
+	var c *int  // a variable of type 'pointer to int'
+ 
+	a = 42      // assigning value '42' to 'a'
+	b = a       // copying the value from 'a' to 'b'
+	c = &a      // assigning the address of 'a' to 'c'
+ 
+	fmt.Printf("Values:\n a = %v\n b = %v\n c = %v\n*c = %v\n", a, b, c, *c)
+ 
+	a = 21      // assigning a new value of '21' to 'a'
+ 
+	fmt.Printf("Values:\n a = %v\n b = %v\n c = %v\n*c = %v\n", a, b, c, *c)
+	fmt.Printf("Types:\n a:  %T\n b:  %T\n c: %T\n*c:  %T\n", a, b, c, *c)
+}
+```
+Taken from [here](http://piotrzurek.net/2013/09/20/pointers-in-go.html)
+
+
+The output from this program is:
+```c
+Values:
+ a = 42
+ b = 42
+ c = 0xc04203e1d0
+*c = 42
+Values:
+ a = 21
+ b = 42
+ c = 0xc04203e1d0
+*c = 21
+Types:
+ a:  int
+ b:  int
+ c: *int
+*c:  int
+
+Program exited.
+```
+
+[Here](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back) is a very good article about pointers in go. 
 
 Part 2 coming next week
