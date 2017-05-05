@@ -163,6 +163,12 @@ If you want to be as explicit as possible the above golang line can turn into:
 var i int
 i = 0
 ```
+Alternatively 
+
+```golang
+var i =0 
+```
+Is also valid, go will be happy as a clam as long as it can tell what variable is what type, either by explicit type declaration or by the value assigned to it. If no value is assigned to a variable, the default value is 0, false, or empty string  ("") as appropriate for the type.
 
 The comments explain the goroutines, and the anonymous function. 
 
@@ -194,6 +200,7 @@ func main() {
 	fmt.Printf("Types:\n a:  %T\n b:  %T\n c: %T\n*c:  %T\n", a, b, c, *c)
 }
 ```
+
 Taken from [here](http://piotrzurek.net/2013/09/20/pointers-in-go.html)
 
 
