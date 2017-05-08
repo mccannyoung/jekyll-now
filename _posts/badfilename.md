@@ -43,4 +43,16 @@ func main() {
 
 for doesn't require any values, and with no values it's an infinite loop. 
 
-Notice the lack of parenthesis around the if statement, go isn't big on parentheses. 
+Notice the lack of parenthesis around the if statement, go isn't big on parentheses (it's delightfully terse). Speaking of terse, you can include short statements in the if statement, for example:
+
+```golang
+func pow(x, n, lim float64) float64 {
+	if v := x - n; v < lim {
+		return v
+	}
+	return lim
+}
+```
+
+Which can be helpful, v is only defined for the scope of the if statement. 
+
