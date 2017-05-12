@@ -56,3 +56,58 @@ func pow(x, n, lim float64) float64 {
 
 Which can be helpful, v is only defined for the scope of the if statement. 
 
+Switch statement:
+
+```golang
+import (
+	"fmt"
+)
+func main(){
+	fizzbuzz(3)
+	fizzbuzz(5)
+	fizzbuzz(15)
+	fizzbuzz(17)
+}
+func fizzbuzz(x int){
+	modFizz := x%3 == 0 
+	modBuzz := x%5 == 0 
+	switch {
+	case modFizz:
+		fmt.Println("Fizz")
+	case modBuzz:
+		fmt.Println("Buzz")
+	default:
+		fmt.Println(x)
+	}
+}
+```
+
+Here's a classic FizzBuzz. This won't return the proper solution though. Unlike switch statements in other languages, there's no default fallthrough. 
+
+```golang
+import (
+	"fmt"
+)
+func main(){
+	fizzbuzz(3)
+	fizzbuzz(5)
+	fizzbuzz(15)
+	fizzbuzz(17)
+}
+func fizzbuzz(x int){
+	modFizz := x%3 == 0 
+	modBuzz := x%5 == 0 
+	switch {
+	case modFizz && modBuzz:
+		fmt.Println("FizzBuzz")
+	case modFizz:
+		fmt.Println("Fizz")
+	case modBuzz:
+		fmt.Println("Buzz")
+	default:
+		fmt.Println(x)
+	}
+}
+```
+
+Works. 
