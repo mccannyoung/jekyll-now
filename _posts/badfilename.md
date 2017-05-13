@@ -155,5 +155,7 @@ func main() {
 
 Now what would you guess this would return? Obviously "done" will be the first thing returned, what will be the second? Would it be "1" or "4"? 
 
-Defer works as by putting at the return on a stack, it's a FILO stack though, so 4 is the correct answer. 
+Defer works as by putting at the return on a stack, it's a FILO (first-in last-out) stack though (think of push and pop examples from ), so 4 is the correct answer. 
+
+
 
