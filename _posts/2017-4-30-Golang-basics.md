@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Golang Basics part 1
+title: Golang Basics For Java/C# developers part 1
 ---
 
 Here is the obligatory "Hello World" in Go.
@@ -226,5 +226,7 @@ Program exited.
 ```
 
 [Here](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back) is a very good article about pointers in go. 
+
+Now go has something called arrays, which should be familiar. Sadly arrays in go are fixed size. If you need a dynamic list of variables, you want what is called a slice.  
 
 Part 2 coming next week
