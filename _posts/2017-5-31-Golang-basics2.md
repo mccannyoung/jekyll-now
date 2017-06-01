@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Golang Basics part 2
+title: Golang Basics For Java/C# developers part 2
 ---
 
 Now that we've looked at a couple example programs, and gone over some of the nuts and bolts let's continue. Last time we saw a for-loop that was virtually identical in content to loops we see in C/C++, Java, etc. Let's see how else for loops can work in go. 
