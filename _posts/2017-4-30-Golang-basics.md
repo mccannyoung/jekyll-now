@@ -227,6 +227,19 @@ Program exited.
 
 [Here](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back) is a very good article about pointers in go. 
 
-Now go has something called arrays, which should be familiar. Sadly arrays in go are fixed size. If you need a dynamic list of variables, you want what is called a slice.  
+Now go has something called arrays, which should be familiar. Sadly arrays in go are static in size. If you need a dynamic list of variables, you want what is called a slice.  Both Array and Slice objects have "capacity" and "size" values. 
+
+```golang
+//This is an array
+a := [4]int {0, 1, 2, 3}
+//This is a slice
+a := []int{0, 1, 2, 3}
+```
+A slice can increase in capacity by appending. It can also be 'sliced'
+
+```golang
+b := []byte{'g', 'o', 'l', 'a', 'n', 'g'}
+// b[1:4] == []byte{'o', 'l', 'a'}, sharing the same storage as b
+```
 
 Part 2 coming next week
