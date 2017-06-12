@@ -5,7 +5,7 @@ title: Machine Learning Toy Application
 
 Just to change gears a bit, I've decided to apply my new go skills to a machine learning problem. Now I took Artificial Intelligence and Machine Learning in graduate school, but that was five years ago and I haven't had occasion to use it for work since. 
 
-[Write more about machine learning in general](http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf)
+There are various types of machine learning, there's supervised, unsupervised, and semi-supervised. There's a ton of different types of algorithms, to accomplish tasks such as clustering data, to predictive algorithms, to audio/video analysis, machine learning can even be applied to tasks like playing a board game, or solving a puzzle. Most relies on putting in data, and giving it feedback and the alogrithm optimizing. [Write more about machine learning in general](http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf)
 
 [This is a useful article](http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf)
 
