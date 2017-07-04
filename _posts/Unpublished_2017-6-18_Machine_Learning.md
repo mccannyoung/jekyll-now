@@ -13,5 +13,5 @@ Let's have the call-in announcement line be controlled via a website. We're goin
 
 For machine learning, I've thought about exploring the [AWS machine learning](http://docs.aws.amazon.com/machine-learning/latest/dg/machine-learning-concepts.html) service or the [Azure machine learning](https://azure.microsoft.com/en-us/services/machine-learning/) service, or even [Google Prediction API](https://cloud.google.com/prediction/docs/).
 
-I'm going to use AWS for this example, and the data set is going to be data about if two colors are complementary or not (red and green are, red and blue are not). This is a question that doesn't require machine learning, a simple switch statement would suffice, but it is easy to generate a dataset for, and should not take a large amount of processing time.
+I'm going to use AWS for this example, and the [data set](https://s3.amazonaws.com/elasticbeanstalk-us-east-1-020023534553/mldata/trainingdata.csv) is going to be data about if two colors are complementary or not (red and green are, red and blue are not). This is a question that doesn't require machine learning, a simple switch statement would suffice, but it is easy to generate a dataset for, and should not take a large amount of processing time.
 
