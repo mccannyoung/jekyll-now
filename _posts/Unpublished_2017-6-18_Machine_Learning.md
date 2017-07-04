@@ -9,14 +9,9 @@ There are various types of machine learning, there's supervised, unsupervised, a
 
 A very minor product at my work is a call-in line for a manufacturer for the citizens who live by their plants.  They also have a line people can call to hear announcements, about current events. It would be useful if there was a way to categorize call ins and flag the ones about not-known issues, particularly calls about severe events. 
 
-Because this is a toy example, let's limit the scope of possible events to four things:
-
-- Fire
-- Earthquake
-- Tsunami
-- Zombies
-
 Let's have the call-in announcement line be controlled via a website. We're going to use Twilio to handle the backend phone system. Twilio has a [wonderfully documented programmer-friendly API](https://www.twilio.com/docs/). Twilio has a lot of libraries for various languages, it has nothing for go, the language I'll be using in this, but because all we're going to need to do is generate TwiML. 
 
-For machine learning, I've thought about exploring the [AWS machine learning](http://docs.aws.amazon.com/machine-learning/latest/dg/machine-learning-concepts.html) service or the [Azure machine learning](https://azure.microsoft.com/en-us/services/machine-learning/) service, or even [Google Prediction API](https://cloud.google.com/prediction/docs/). But, looking at my test case, I'm not even sure machine learning is entirely warrented (only certain words indicate any of those events, "smoke/heat", "ground-shaking", "waves" and "undead" for examples), but assuming I don't want to build a dictionary or update it, it's a decent case study. 
+For machine learning, I've thought about exploring the [AWS machine learning](http://docs.aws.amazon.com/machine-learning/latest/dg/machine-learning-concepts.html) service or the [Azure machine learning](https://azure.microsoft.com/en-us/services/machine-learning/) service, or even [Google Prediction API](https://cloud.google.com/prediction/docs/).
+
+I'm going to use AWS for this example, and the data set is going to be data about if two colors are complementary or not (red and green are, red and blue are not). This is a question that doesn't require machine learning, a simple switch statement would suffice, but it is easy to generate a dataset for, and should not take a large amount of processing time.
 
